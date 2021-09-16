@@ -19,12 +19,12 @@ class CreateUsersTable extends Migration
             $table->string('phone')->unique();
             $table->string('email')->unique();
             $table->timestamp('phone_verified_at')->nullable();
-            $table->string('otp');
+            $table->string('otp')->nullable();
             $table->string('position');
             $table->integer('status')->default(1);
             $table->integer('role')->default(2);
-            $table->integer('created_by');
-            $table->integer('updated_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
