@@ -31,6 +31,7 @@ class CreateReportsTable extends Migration
                 ->constrained('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

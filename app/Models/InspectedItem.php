@@ -9,6 +9,15 @@ class InspectedItem extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'resource_url',
+        'thumbnail_url',
+        'resource_type',
+        'report_id',
+        'created_by',
+        'updated_by',
+    ];
+
     public function report()
     {
         return $this->belongsTo(Report::class);

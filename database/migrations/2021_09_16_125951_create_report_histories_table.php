@@ -20,7 +20,7 @@ class CreateReportHistoriesTable extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->integer('version');
-            $table->string('published_at');
+            $table->date('published_at');
             $table->string('resource_url');
             $table->string('dropbox_url');
             $table->foreignId('created_by')
